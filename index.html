@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avilable Soon</title>
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=League+Spartan:wght@400;500;600;700;800;900&family=Montserrat+Alternates:wght@300;400;500&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Montserrat+Alternates:wght@300;400;500&family=Roboto&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- wow.js -->
+    <link rel="stylesheet" href="WOW-master/css/libs/animate.css"/>
+    <!-- my style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- loader page -->
+    <!-- <main class="loader">
+        <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+          </div>
+    </main> -->
+
+    <!-- Page Img -->
+    <!-- <main class="bgImg"></main> -->
+    
+    <!-- for scrolling -->
+    <main class="mains">
+        <!-- particles background -->
+        <div id="particles-js"></div>
+        
+        <!-- __________ 1st page __________ -->
+        <main class="container-fluid w-100 h-100 page-1 page" id="page-1" data-bar="HOME">
+            <article class="h-100 position-relative">
+                
+                <!-- header -->
+                <header class="d-flex justify-content-between align-items-center fixed-top">
+                    <div class="bars" onclick="barsMenu()" onmouseover="moveBars()" onmouseout="defBars()">
+                        <span class="txt">MENU</span>
+                        <!-- <span class="txt-sm">MENU</span> -->
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                        <div class="bars-menu">
+                            <a href="#page-1" class="link" onclick="clicked()">HOME</a>
+                            <a href="#page-2" class="link" onclick="clicked()">ABOUT</a>
+                            <a href="#page-3" class="link" onclick="clicked()">CONTACT</a>
+                        </div>
+                    </div>
+                    <div class="logo-sec">
+                        <h1 class="mb-0">VISION</h1>
+                    </div>
+                </header> 
+        
+                <!-- middle -->
+                <main class="middle" >
+                    <h1 class="wow fadeInRight" data-wow-duration="2s" data-wow-offset="10">ALMOST HERE</h1>
+                    <div class="wow fadeInRight social" data-wow-duration="2s" data-wow-offset="10">
+                        <p class="text-end mt-3 fw-bold mb-2">Follow Us</p>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i class="fa-brands fa-github"></i>
+                    </div>
+                </main>
+
+                <!-- content left-bottom -->
+                <main class="wow fadeInLeft content" data-wow-duration="2s" data-wow-offset="50">
+                    <img src="img/visionlogo.png" class="img-fluid" alt="" width="360px">
+                    <h3 class="fw-bold mb-2 mt-3" style="border-color: rgba(255, 255, 255, 0.2);">Avilable Soon ...</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dium, odit hi! Rerum, assumenda ratione. Lorem, ipsum dolor.</p>
+                </main>
+
+                <!-- counter right-bottom -->
+                <main class="wow fadeInUp counter" data-wow-duration="2s" data-wow-delay="1s" data-wow-offset="10">
+                    <p class="mb-0 text-end fw-bold">Coming Soon</p>
+                    <section class="count">
+
+                        <div class="day">
+                            <span id="d" d-time="07"></span>
+                        </div>
+
+                        <div class="hour">
+                            <span id="h" h-time="12"></span><span><small>:</small></span>
+                        </div>
+
+                        <div class="minute second" >
+                            <span id="m" m-time="34" ></span>
+                            <span id="s" s-time="54"></span>
+                        </div>
+
+                    </section>
+                </main>
+            </article>
+        </main>
+
+        <!-- __________ 2nd page __________ -->
+        <main class="container-fluid w-100 h-100 position-relative page-2 page" id="page-2" data-bar="ABOUT">
+            <article class="h-100 position-relative">
+                <!-- middle 2 -->
+                <main class="middle">
+                    <h1 class="wow fadeInRight" data-wow-duration="2s" data-wow-offset="10">REGISTER NOW</h1>
+                </main>
+
+                <!-- content 2 left-bottom-->
+                <div>
+                    <main class="wow fadeInLeft content" data-wow-duration="2s" data-wow-offset="50">
+                        <h3 class="fw-bold" style="border-color: rgba(255, 255, 255, 0.2);">Hint me when avilable</h3>
+                        <form action="">
+                            <div class="input-group mt-3">
+                                <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
+                                <input type="email" class="form-control" required placeholder="Enter your Email to Stay Tuned">
+                                <button type="submit" class="input-group-text btn btn-light">OK</button>
+                            </div>
+                        </form>
+                    </main>
+                </div>
+
+                <!--  -->
+                    
+            </article>
+        </main>
+
+        <!-- __________ 3rd page __________ -->
+        <main class="container-fluid w-100 h-100 position-relative page-3 page" id="page-3" data-bar-="CONTACT">
+            <article class="h-100 position-relative">
+                <!-- middle 3 -->
+                <main class="middle">
+                    <h1 class="wow fadeInRight " data-wow-duration="2s" data-wow-offset="10">TOUCH US</h1>
+                </main>
+
+                <!-- content 3 left-bottom-->
+                <main class="wow fadeInLeft content" data-wow-duration="2s" data-wow-offset="50">
+                    <form action="">
+                        <div class="input-group">
+                            <div class="input-group-text"><i class="fa-solid fa-user"></i></div>
+                            <input type="text" name="name" required class="form-control text-white" placeholder="Full Name">
+                            <button type="submit" class="input-group-text btn btn-sm btn-light">SEND</button>
+                        </div>
+
+                        <div class="input-group mb-3 mt-3">
+                            <div class="input-group-text"><i class="fa-solid fa-envelope"></i></div>
+                            <input type="email" name="email" required class="form-control text-white" placeholder="email@example.com">
+                        </div>
+
+                        <div class="input-group">
+                            <textarea name="message" required class="form-control" rows="5" placeholder="Leave Your Comment ..."></textarea>
+                        </div>
+                    </form>
+                </main>
+                
+            </article>
+        </main>
+    </main>
+
+    <!-- font awesome icons -->
+    <script src="https://kit.fontawesome.com/63c1d829d8.js" crossorigin="anonymous"></script>
+    
+    <!-- WOW.js -->
+    <script src="WOW-master/dist/wow.min.js"></script>
+    <script> new WOW().init();</script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    
+    <!-- particles -->
+    <script src="particles.js-master/particles.min.js"></script>
+    <script src="particles.js-master/particles.js"></script>
+
+    <!-- my js -->
+    <script src="main.js"></script>
+</body>
+</html>

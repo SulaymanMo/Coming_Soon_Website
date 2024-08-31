@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html { 
+            margin: 0;
+            height: 100%;
+            font-size: 24px;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        article {
+            width: 100%;
+            height: 100%;
+        }
+        main {
+            height: 100%;
+            border: 1px solid #000;
+            position: relative;
+        }
+        h2 {
+            transition: all .5s ease;
+            font-size: 30px;
+            text-align: end;
+            padding: 38px;
+            position: absolute;
+            top: 0;
+            right: -40px;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .active {
+            right: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+    <article>
+        <main style="background-color: yellow;" class="main-1">
+            <h3 data-para="10">lorem</h3>
+        </main>
+    
+        <main style="background-color: red;" class="main-2">
+            <div class="">
+                <h2 data-para="10">Follow Us</h2>
+            </div>
+        </main>
+    
+        <main style="background-color: yellow;" class="main">
+            <h3 data-para="10">lorem</h3>
+        </main>
+    </article>
+
+<script >
+    let main = document.querySelector('.main-2');
+    let h2 = document.querySelector('.main-2 h2');
+    window.onload = () => {
+        window.onscroll = () => {
+            if (window.scrollY >= main.offsetTop - 350) {
+                h2.classList.add('active');
+            } 
+            else {
+                h2.classList.remove('active');
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,738 @@
+* {
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+    height: 100% !important;
+    font-family: 'League Spartan', sans-serif;
+}
+/* for scrolling */
+::-webkit-scrollbar {
+    display: none; 
+}
+/* for scrolling */
+.mains{
+    /* position: absolute; */
+    /* position: relative; */
+    /* top: 0; */
+    /* left: 0; */
+    width: 100%;
+    height: 100%;
+    /* scroll-snap-type: y mandatory;  */ 
+}
+
+main.container-fluid{
+/* background-color: rgba(9, 12, 2, 1);     */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 38px;
+    color: #fff;
+    font-weight: 300;
+    /* scroll-snap-align: start;  */
+}
+/* background img  */
+/* main.bgImg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(img/bgImg.jpg);
+} */
+/* particles */
+#particles-js {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(1, 5, 26, 1);
+}
+    /* header */
+header {
+    padding: 38px 38px 10px 38px;
+    background-color: rgba(1, 5, 26, 1);
+}
+header .bars {
+    width: 32px;
+    cursor: pointer;
+    position: relative;
+}
+header .bars .txt {
+    position: absolute;
+    top: 4px;
+    left: 46px;
+    opacity: 1;
+    visibility: visible;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+header .bars .txt.pooftxt /* .pooftxt => js animation */ {
+    right: -100px;
+    opacity: 0;
+    visibility: hidden;
+}
+/*  */
+header .bars .bar1, .bar2, .bar3 {
+    width: 100%;
+    padding-bottom: 11px;
+    transition: all 0.5s ease;
+    border-top: 2px solid #fff;
+}
+header .bars .bar2 {
+    width: 13px;
+}
+
+/* animate bars */
+header .bars .bars-menu {
+    position: absolute;
+    top: -3px;
+    opacity: 0;
+    left: 148px;
+    font-weight: 600;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    display: flex;
+}
+header .bars .bars-menu a {
+    padding: 7px ;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    transition: all .4s ease;
+    background-color: rgba(1, 5, 26, 1);
+}
+header .bars .bars-menu a:hover {
+    transform: translateY(-2px);
+}
+header .bars .bars-menu a::before {
+    content: '';
+    position: absolute;
+    left: 3.5px;
+    bottom: -30px;
+    opacity: 0;
+    width: 90%;
+    height: 1px;
+    visibility: hidden;
+    transition: all .4s ease;
+}
+header .bars .bars-menu a:hover::before {
+    opacity: 1;
+    position: absolute;
+    bottom: 2px;
+    left: 3.5px;
+    visibility: visible;
+    background-color: #fff;
+}
+header .bars .bars-menu.actMenu {
+    left: 41px;
+    opacity: 1;
+    visibility: visible;
+}
+
+    /* middle */
+main.middle {
+    position: relative;
+    top: 8%;
+    right: 0;
+    width: 100%;
+    padding: 68px 0;
+    transform: translate(0, -1%);
+    /* font-family: 'Cairo', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'League Spartan', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif; */
+}
+main.middle h1 {
+    position: absolute;
+    right: 0;
+    top: 30% !important;
+    width: 100%;
+    font-size: 48px;
+    font-weight: 900;
+    text-align: right;
+    transition: all .4s ease;
+    color: rgba(255, 255, 255, 0.2);
+}
+main.middle h1::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 0;
+    width: 50%;
+    height: 2px;
+    background-color: currentColor;
+}
+/* social */
+.social {
+    position: absolute;
+    right: 0;
+    top: 78%;
+    z-index: 10;
+    transition: all .4s ease;
+    display: block;
+}
+.social i {
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: all .4s ease;
+}
+
+    /* content */
+main.content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 45%;
+    line-height: 1.4;
+    font-weight: 500;
+}
+.content h3 {
+    /* max-width: 50%; */
+    padding-left: 16px;
+    font-size: 32px;
+    border-left: 4px solid #fff;
+    /* border-bottom: 4px solid #fff; */
+    font-weight: bold;
+}
+.content p {
+    font-size: 18px;
+}
+
+    /* counter right-bottom */
+main.counter {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+main.counter p {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    text-align: right;
+    /* max-width: 480px; */
+    width: 100%;
+    /* margin-bottom: 2px; */
+    padding-bottom: 6px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
+}
+/* count */
+.count {
+    font-weight: 400;
+    width: 100%;
+}
+.day, .hour, .minute, .second {
+    font-size: 80px;
+    display: inline-block;
+}
+/*  */
+.day #d {
+    font-size: 130px;
+    margin: 0 28px 0 0;
+    display: inline-block;
+}
+
+/*  */
+.minute {
+    position: relative;
+}
+.minute #s {
+    position: absolute;
+    top: 2px;
+    right: 40px;
+    color: #fff;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: bold;
+}
+.minute::after {
+    content: 'Days';
+    position: absolute;
+    top: 0;
+    left: -143px;
+    color: #fff;
+    line-height: 1;
+    font-size: 18px;
+    /* font-weight: bold; */
+} 
+.minute::before {
+    content: 'Secs';
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    color: #fff;
+    line-height: 1;
+    font-size: 18px;
+    /* font-weight: bold; */
+}
+
+    /* page-2 */
+main.page-2 .content form input {
+    color: #fff;
+    background-color: inherit !important;
+    border-color: rgba(255, 2555, 255, 0.5);
+}  
+main.page-2 .content form input[name="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance: none;
+    box-shadow: none !important;
+}
+
+    /* page-3 */
+main.page-3 .content form div input[name="name"], div input[name="email"], textarea[name="message"] {
+    /* width: 85% !important; */
+    /* color: #e9ecef !important; */
+    border-color: rgba(255, 2555, 255, 0.5);
+    background-color: inherit !important;
+    /* background-color: rgba(255, 2555, 255, 0.1) !important; */
+}
+main.page-3 .content form textarea[name="message"] {
+    /* background-color: rgba(255, 2555, 255, 0.2) !important; */
+    /* border-color: rgba(255, 2555, 255, 0.2); */
+    width: 400px !important;
+    color: #fff;
+}
+main.page-3 .content form input[name="name"]::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+main.page-3 .content form input[name="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+main.page-3 .content form textarea[name="message"]::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* animate button submit in forms => page-2 & page-3 */
+.content form button[type="submit"] {
+    position: relative;
+    font-weight: bold;
+}
+.content form button[type="submit"]:hover {
+    color: #fff;
+}
+.content form button[type="submit"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+    width: 0;
+    height: 0;
+    transition: all .6s ease;
+    border-radius: 0.375rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+.content form button[type="submit"]:hover::after {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.41);
+}
+
+/*  */
+@media (max-width: 820px) {
+/* container-fluid */
+    main.container-fluid {
+        padding: 20px;
+        overflow: hidden;
+    }
+/* header */
+    header {
+        padding: 20px 20px 10px 20px;
+    }
+    header .bars .txt {
+        top: 2px;
+        right: -54px;
+    }
+    header .bars .txt.pooftxt /* .pooftxt => js animation */ {
+        right: -70px;
+    }
+    /*  */
+    header .bars .bar1, .bar2, .bar3 {
+        padding-bottom: 8px;
+        border-top: 2px solid #fff;
+    }
+    /* animate bars */
+    header .bars .bars-menu {
+        top: -5px;
+    }
+    header .bars .bars-menu a:hover::before {
+        bottom: -4px;
+        background-color: #fff;
+    }
+
+/* middle */
+    main.middle {
+        top: 8%;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+        /* font-size: 16px; */
+    }
+    main.middle h1 {
+        font-size: 36px;
+        font-weight: 900;
+    }
+    main.middle h1::after {
+        bottom: 0;
+        width: 50%;
+    }
+    main.middle .social {
+        top: 135%;
+    }
+    main.middle .social i {
+        font-size: 16px;
+    }
+
+/* content left-bottom */
+    main.content {
+        left: 0;
+        bottom: 0;
+        width: 45%;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+    .content h3 {
+        padding-left: 6px;
+        font-size: 28px;    
+        border-left: 3px solid #fff;
+        font-weight: bold;
+    }
+    .content p {
+        font-size: 17px;
+    }
+
+/* counter right-bottom */
+    main.counter {
+        bottom: 0;
+        right: 0; 
+        z-index: 3;
+    }
+    main.counter p {
+        /* position: relative; */
+        /* display: inline; */
+        top: -30px;
+        right: 0;
+        font-size: 16px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid #fff;
+    }
+    /* count */
+    .count {
+        font-weight: 400;
+    }
+    .day, .hour, .minute, .second {
+        font-size: 60px;
+    }
+    /*  */
+    .day #d {
+        font-size: 90px;
+        margin: 0 28px 0 0;
+    }
+    .minute #s {
+        top: 0;
+        right: 40px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .minute::after {
+        left: -116px;
+        top: 0;
+    }
+    .minute::before {
+        content: 'Secs';
+        top: 0;
+        right: 4px;
+        font-size: 18px;
+        /* font-weight: bold; */
+    }
+}
+
+/*  */
+@media (max-width: 640px) {
+/* content left-bottom */
+    main.content {
+        left: 0;
+        bottom: 32px;
+        width: 100%;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+    .content h3 {
+        padding-left: 6px;
+        font-size: 28px;    
+        border-left: 3px solid #fff;
+        font-weight: bold;
+    }
+    .content p {
+        font-size: 16px;
+    }
+    main.content img {
+        width: 52%;
+    }
+
+/* middle */
+    main.middle h1 {
+        text-align: center;
+    }
+    main.middle h1::after {
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+/* counter right-bottom */
+    main.counter {
+        bottom: 42%;                             /**/
+        right: 0;
+        z-index: 3;
+        width: 100%;
+        text-align: right;
+    }
+    main.counter p {
+        top: -10px;
+        right: 0;
+        text-align: right;
+        width: 46%;
+        padding-bottom: 6px;
+        /* font-weight: 700; */
+    }
+    /* count */
+    .count {
+        width: 100%;
+        font-weight: 400;
+        margin-top: 20px;
+    }
+    .day, .hour, .minute, .second {
+        font-size: 52px;
+    }
+    /*  */
+    .day #d {
+        font-size: 70px;
+    }
+    .minute::after {
+        left: -107px;
+        top: 0;
+    }
+    /*  */
+    .minute #s {
+        top: 0;
+        right: 40px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .minute::before {
+        content: 'Secs';
+        position: absolute;
+        top: 0;
+        right: 4px;
+        color: #fff;
+        line-height: 1;
+        font-size: 16px;
+        /* font-weight: bold; */
+    }
+    
+/* middle */
+    main.middle h1 {
+        position: relative;
+        text-align: left;
+        font-size: 24px;
+        width: 100%;
+    }
+    main.middle h1::after {
+        top: -24%;
+        width: 100%;
+        transform: translate(50%, -50%);
+    }
+    main.middle {
+        width: 100%;
+        position: absolute;
+        /* top: 30% !important; */
+        text-align: right;
+        bottom: -200% !important;
+    }
+    main.middle h1 {
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.2);
+        
+    }
+   main.counter {
+        bottom: 62%;
+   }
+   .page-2 main.content {
+        bottom: 71px;
+   }
+   .page-2 main.content h3 {
+        font-size: 24px;
+   }
+   .page-2 main.content form .input-group {
+        height: 20px !important;
+   }
+   main.page-2 .content form input {
+    height: 33px;
+   }
+   .page-2 main.content form button {
+    padding: 0;
+    padding: 4px 8px 0 8px;
+}
+
+/* page-3 */
+   .page-3 main.content {
+        bottom: 116px;
+   }
+   .page-3 main.content form .input-group {
+        height: 30px;
+   }
+   .page-3 main.content form .input-group input {
+        height: 30px;
+   }
+   .page-3 main.content form textarea {
+        height: 88px;
+    }
+    .page-3 main.content form .input-group button {
+        padding-bottom: 1px;
+    }
+    main.middle .social {
+        top: 10%;
+    }
+    main.middle .social p {
+        font-size: 16px;
+        margin-bottom: 0 !important;
+    }
+    main.middle .social i {
+        font-size: 14px;
+    }
+    header .bars .bars-menu a {
+        font-size: 14px;
+    }
+}
+
+/*  */
+@media (max-height: 400px) {
+    main.content h3 {
+        font-size: 18px;
+    }
+    main.content p {
+        font-size: 14px;
+    }
+    main.counter p {
+        top: 2px;
+        font-size: 14px;
+    }
+    main.middle h1 {
+        font-size: 20px;
+    }
+    button[type="submit"] {
+        font-size: 14px;
+        padding: 3px;
+        font-weight: 500;
+    }
+}
+
+/*  */
+@media (max-width: 380px) {
+    form div.input-group-text {
+        display: none;
+    }
+    section.count #d {
+        font-size: 50px;
+        margin-right: 10px;
+    }
+    .minute::after {
+        font-size: 10px;
+        top: 17px;
+        left: -65px;
+    }
+    section.count #h, #m {
+        font-size: 30px;
+    }
+    section.count #s {
+        font-size: 10px;
+        top: 20px;
+        right: 20px;
+    }
+    .minute.second::before {
+        font-size: 10px;
+        top: 20px;
+        right: 0;
+    }
+
+    /* header */
+    header .bars .bars-menu {
+        left: 0;
+        top: 0;
+        padding: 10px 0;
+        background-color: rgba(1, 5, 26, 1);
+        flex-direction: column;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-left: none;
+        overflow: hidden;
+    }
+    header .bars .bars-menu.actMenu {
+        font-size: 18px;
+        top: 34px;
+        left: -26px;
+        padding: 6px;
+        z-index: 9999;
+    }
+    header .bars .txt {
+        font-size: 15px;
+        top: 1px;
+        right: -53px;
+    }
+    header .bars .bars-menu a {
+        padding: 10px 0 10px 20px;
+        font-size: 13px;
+        padding-right: 150px;
+    }
+    header .bars .bars-menu a:hover::before {
+        opacity: 1;
+        bottom: 2px;
+        width: 50%;
+        visibility: visible;
+        background-color: #fff;
+    }
+}
+
+/*  */
+@media (max-width: 349px) {
+    header .bars .bars-menu.actMenu {
+        font-size: 12px;
+        top: 34px;
+        left: -26px;
+        padding: 6px;
+        z-index: 9999;
+    }
+    header .bars .txt {
+        font-size: 15px;
+        right: -53px;
+    }
+}
+
+
